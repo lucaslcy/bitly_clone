@@ -21,8 +21,7 @@ h2 {
 </style>
 <style>p.indent{ padding-left: 1.8em }</style>
 
-<h1>Bit.ly Hack Version!</h1>
-<p>Hello, world!</p>
+<h1>Screw you, bitly!</h1>
 <table width="600">
   <tr>
     <th>File Description</th>
@@ -43,9 +42,11 @@ h2 {
 </table>
 <p></p>
 
+<%= @errors if @errors %>
+
 <form action="/form" method="post">
 Enter URL:
-<input type = "text" name="long_url">
+<input type = "text" placeholder="Paste a valid link only!" name="long_url">
 <input type = "submit" value="Submit">
 </form>
 
@@ -53,12 +54,14 @@ Enter URL:
   <tr>
     <th>Long URL</th>
     <th>Short URL</th>
+    <th>Click Count</th>
   </tr>
   
     <% Url.all.each do |url|%>
     <tr>
     <td><%= url.long_url%></td>
     <td><a href="<%=url.short_url%>"><%= url.short_url%></a></td>
+    <td><%= url.click_count%></td>
     </tr>
     <% end %>
   
