@@ -1,68 +1,28 @@
-<style>
-h1 {
-    display: block;
-    font-size: 3em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-}
+<p id="error"><%= @errors if @errors %></p>
 
-h2 {
-    display: block;
-    font-size: 1em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-}
-</style>
-<style>p.indent{ padding-left: 1.8em }</style>
 
-<h1>Screw you, bitly!</h1>
-<table width="600">
-  <tr>
-    <th>File Description</th>
-    <th>File Location</th>
-  </tr>
-  <tr>
-    <td>This view file</td>
-    <td>/app/views/index/erb</td>
-  </tr>
-  <tr>
-    <td>This layout file</td>
-    <td>/app/views/layout.erb</td>
-  </tr>
-  <tr>
-    <td>This current controller file</td>
-    <td>/app/controllers/index.rb</td>
-  </tr>
-</table>
-<p></p>
-
-<%= @errors if @errors %>
 
 <form action="/form" method="post">
-Enter URL:
 <input type = "text" placeholder="Paste a valid link only!" name="long_url">
 <input type = "submit" value="Submit">
 </form>
+<p></p>
 
+<div class="table">
 <table width="600">
   <tr>
     <th>Long URL</th>
     <th>Short URL</th>
     <th>Click Count</th>
   </tr>
-  
-    <% Url.all.each do |url|%>
+  <% Url.all.each do |url|%>
     <tr>
-    <td><%= url.long_url%></td>
-    <td><a href="<%=url.short_url%>"><%= url.short_url%></a></td>
-    <td><%= url.click_count%></td>
+      <td><%= url.long_url%></td>
+      <td><a href="<%=url.short_url%>"><%= url.short_url%></a></td>
+      <td><%= url.click_count%></td>
     </tr>
-    <% end %>
-  
+  <% end %>
 </table>
+</div>
+
+<p id="footer">&copy Lucas Looi Limited </p>

@@ -1,0 +1,62 @@
+body {
+	height: 100%;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
+
+h1 {
+	font-size: 32px;
+ 	font-family: Palatino, 'Palatino Linotype', serif;
+  	color: lightsalmon;
+}
+
+table, th, tr, td {
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+	border-collapse: collapse;
+	padding: 10px;
+}
+
+th {
+	border-radius: 80px;
+	background-color: lightsalmon;
+}
+
+p {
+	font-size: 50 px;
+	padding: 30 px;
+}
+
+#error {
+	color:red;
+}
+#footer {
+	font-size: 0.75rem;
+}
+
+input[type=text] {
+	width: 25%;
+	display: block;
+	margin: 0 auto;
+	border: 2px solid green;
+	border-radius: 80px;
+	padding: 12px 20px;
+
+}
+
+input[type=submit] {
+	display: block;
+	margin: 20px auto;
+	padding: 12px 20px;
+	width: 15%;
+	color: black;
+	background-color: orange;
+
+}
+
+input[type=submit]:hover {
+	background-color: lightgreen;
+
+2
