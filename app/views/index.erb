@@ -1,11 +1,10 @@
-<p id="error"><%= @errors if @errors %></p>
+<div id="error"><%= @errors if @errors %></div>
 
-
-
-<form action="/form" method="post">
+<form id= "target" action="/form" method="post">
 <input type = "text" placeholder="Paste a valid link only!" name="long_url">
 <input type = "submit" value="Submit">
 </form>
+
 <p></p>
 
 <div class="table">

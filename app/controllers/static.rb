@@ -5,10 +5,13 @@ end
 post '/form' do
   @temp = Url.new(long_url: params[:long_url], short_url: Url.shorten)
   if @temp.save
-  	erb :"index"
+  	# erb :"index"
+    status 200
+    @temp.to_json
   else
+    status 400
     @errors = "#{@temp.errors.full_messages.join(" ")}"
-    erb :"index"
+    { error: @errors }.to_json
   end
 end
 

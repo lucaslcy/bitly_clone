@@ -36,6 +36,10 @@ p {
 	font-size: 0.75rem;
 }
 
+.blue {
+	background-color: : blue;
+}
+
 input[type=text] {
 	width: 25%;
 	display: block;
@@ -59,4 +63,4 @@ input[type=submit] {
 input[type=submit]:hover {
 	background-color: lightgreen;
 
-2
+}
